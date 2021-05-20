@@ -1,0 +1,67 @@
+// Running a container (run command will downlaod a and install a image)
+
+docker run hello-world
+
+// Running a command inside a container
+
+docker run busybox echo hi there
+
+docker run busybox ls
+
+// Listing all container running
+
+docker ps
+
+// Listing all the cointainer runned till now
+
+docker ps --all
+
+// container life cycle
+
+docker run = docker create + docker start
+
+docker create hello-world 
+
+// docker removing all the stopped container
+
+docker system prune
+
+// Logging output of the container in the terminal 
+
+docker logs <container_id>
+
+// stopping a running container
+
+// soft stop
+docker stop <container_id>
+
+// hard stop
+docker kill <container_id>
+
+// running command into running container
+
+docker exec <container_id> <command>
+
+ex : docker exec -it <container_id> echo hello world
+
+// running a shell inside a container
+
+docker exec -it <container_id> sh
+
+docker run -it <image_name> sh
+
+// docker remove images
+
+docker rmi <image id>
+
+docker rmi $(docker images -q)
+
+// docker remove container
+
+docker rm <container id>
+
+// docker remove dangling images
+
+docker image prune --filter="dangling=true"
+
+docker system prune -a

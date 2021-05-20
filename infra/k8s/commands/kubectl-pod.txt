@@ -1,0 +1,17 @@
+// list of pod
+kubectl get pods
+
+// execute commands in running pod container
+kubectl exec -it [pod_name] [cmd]
+
+// logs of pod
+kubectl logs [pod_name]
+
+// delete pod
+kubectl delete pod [pod_name]
+
+// create pods from config file
+kubectl apply -f [config_file_name]
+
+// describe pod
+kubectl describe pod [pod_name]

@@ -1,0 +1,25 @@
+1. Create a node app
+
+2. Create Dockerfile
+
+//Dockerfile
+
+FROM node:alpine
+
+WORKDIR /usr/app
+
+COPY ./package.json ./
+RUN npm install
+COPY ./ ./
+
+CMD ["npm", "start"]
+
+3. Build the image
+
+docker build -t ovi/node .
+
+4. Run the Image
+
+docker run -p 8080:3000 ovi/node
+
+5. Enjoy

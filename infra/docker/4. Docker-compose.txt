@@ -1,0 +1,32 @@
+work: Creating a node app with redis database using two separate container
+
+1. Create a Dockerfile for node app (check-3)
+
+2. write a docker-compose.yml file
+
+// docker-compose.yml
+
+version: '3'
+
+services:
+  redis-server: 
+    image: 'redis'
+  node-app:
+    build: .
+    ports:
+      - "8080:3000"
+    restart: 'no'
+    
+3. after writing docker-compose issue the command
+
+docker-compose up --build
+or
+docker-compose up
+
+4. for stopping all the container created by docker-compose
+
+docker-compose down
+
+5. for showing all the container started by docker-compose
+
+docker-compose ps

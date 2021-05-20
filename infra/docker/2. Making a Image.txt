@@ -1,0 +1,25 @@
+1. Making a Dockerfile
+
+//Dockerfile
+
+FROM alpine
+
+RUN apk add --update redis
+
+CMD ["redis-server"]
+
+2. build the image
+
+docker build .
+
+or
+
+docker build -t <reponame>/<image_name>:<version> .
+
+3. Take the image id or name and run
+
+docker run <image_id>
+
+or
+
+docker run <reponame>/<image_name>

@@ -1,0 +1,8 @@
+// get all service
+kubectl get services
+
+// describe service
+kubectl describe service [srv_name]
+
+// create service
+kubectl apply -f [srv_config_file]

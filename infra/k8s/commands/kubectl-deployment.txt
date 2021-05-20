@@ -1,0 +1,15 @@
+// get all deployments
+kubectl get deployments
+
+// describe deployment
+kubectl describe deployment [depl_name]
+
+
+// create deployment out of config file
+kubectl apply -f [depl_config_file]
+
+// deleting a deployment
+kubectl delete deployment [depl_name]
+
+// restarting a deployment with new code version
+kubectl rollout restart deployment [depl_name]
